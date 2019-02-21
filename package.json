@@ -1,0 +1,32 @@
+{
+  "name": "wordpress-webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev && npm run watch",
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejingfx/wordpress-webpack-template.git"
+  },
+  "author": "Regene Vilvestre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejingfx/wordpress-webpack-template/issues"
+  },
+  "homepage": "https://github.com/ejingfx/wordpress-webpack-template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "laravel-mix": "^4.0.14",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.17.0",
+    "sass-loader": "7.*",
+    "vue-template-compiler": "^2.6.6"
+  }
+}
