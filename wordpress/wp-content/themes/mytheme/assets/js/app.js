@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./frontend/js/app.js":
-/*!****************************!*\
-  !*** ./frontend/js/app.js ***!
-  \****************************/
+/***/ "./src/js/app.js":
+/*!***********************!*\
+  !*** ./src/js/app.js ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -97,10 +97,10 @@
 
 /***/ }),
 
-/***/ "./frontend/sass/style.scss":
-/*!**********************************!*\
-  !*** ./frontend/sass/style.scss ***!
-  \**********************************/
+/***/ "./src/sass/style.scss":
+/*!*****************************!*\
+  !*** ./src/sass/style.scss ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -109,14 +109,14 @@
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./frontend/js/app.js ./frontend/sass/style.scss ***!
-  \*************************************************************/
+/*!***************************************************!*\
+  !*** multi ./src/js/app.js ./src/sass/style.scss ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/ejingfx/Documents/EWS/wordpress-webpack-template/frontend/js/app.js */"./frontend/js/app.js");
-module.exports = __webpack_require__(/*! /Users/ejingfx/Documents/EWS/wordpress-webpack-template/frontend/sass/style.scss */"./frontend/sass/style.scss");
+__webpack_require__(/*! /Users/ejingfx/Documents/EWS/wp-mix/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Users/ejingfx/Documents/EWS/wp-mix/src/sass/style.scss */"./src/sass/style.scss");
 
 
 /***/ })

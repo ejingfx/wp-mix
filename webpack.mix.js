@@ -1,6 +1,16 @@
 let mix = require('laravel-mix');
-const DOMAIN = 'demo';
-const PUBLIC_PATH = `wordpress/wp-content/themes/${DOMAIN}/`;
+
+// const   SVG_SPRITEMAP = require('svg-spritemap-webpack-plugin');
+const   THEME_DOMAIN = 'mytheme',
+        SRC_DIR = 'src/',
+        OUTPUT_DIR = `wordpress/wp-content/themes/${THEME_DOMAIN}/`,
+        ASSETS = OUTPUT_DIR + 'assets/',
+        FILES = [
+            ASSETS + 'js/*.js',
+            ASSETS + 'css/*.css',
+            OUTPUT_DIR + '*.php',
+            OUTPUT_DIR + '**/*.php'
+        ];
 
 /*
  |--------------------------------------------------------------------------
@@ -14,21 +24,17 @@ const PUBLIC_PATH = `wordpress/wp-content/themes/${DOMAIN}/`;
  */
 
 mix
-    .setPublicPath(PUBLIC_PATH)
-	.js('frontend/js/app.js', 'assets/js/app.js')
-	.sass('frontend/sass/style.scss', 'assets/css/style.css')
-    // .copyWatched(
-    //     'frontend/images/**/*',
-    //     PUBLIC_PATH + 'assets/images',
-    //     { base: 'frontend/images' }
-    // )
-	.copyDirectory('frontend/fonts', 'assets/fonts')
-	.copyDirectory('frontend/lib', 'assets/lib')
+    .setPublicPath(OUTPUT_DIR)
+    .js(SRC_DIR + 'js/app.js', ASSETS + 'js/app.js')
+    .sass(SRC_DIR + 'sass/style.scss', ASSETS +  'css/style.css')
+    .copy(SRC_DIR + 'fonts', ASSETS + 'fonts')
+    .copy(SRC_DIR + 'images', ASSETS + 'images')
+    .copy(SRC_DIR + 'lib', ASSETS + 'lib')
     .browserSync({
         host: 'localhost',
-        port: 8080,
-        //proxy: 'localhost',
-        files: './' + PUBLIC_PATH + '/**/*'
+        port: 3000,
+        proxy: 'localhost:8000',
+        files: FILES
     })
     .version();
 
